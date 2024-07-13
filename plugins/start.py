@@ -32,13 +32,6 @@ from helper_func import subscribed, encode, decode, get_messages, get_shortlink,
 from database.database import add_user, del_user, full_userbase, present_user
 from shortzy import Shortzy
 
-# Initialize bot and listeners
-app = Client("my_bot")
-listen = Listen(app)
-app.add_handler(listen)
-
-# Add debug print statement
-print(f"Listeners registered: {app.dispatcher.listeners}")
 
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
 async def start_command(client: Client, message: Message):
