@@ -175,7 +175,7 @@ async def not_joined(client: Client, message: Message):
                 url = client.invitelink)
         ]
     ]
-     if len(message.command) > 1:
+    if len(message.command) > 1:
         try:
             buttons.append(
                 [
